@@ -1,0 +1,237 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - greetings
+    - hi there
+    - hello friend
+    - good day
+    - hiya
+    - hey hey
+    - hello hello
+    - hi hi
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - see you around
+    - bye bye
+    - see you later
+    - take care
+    - until next time
+    - catch you later
+    - farewell
+    - have a good day
+    - see you soon
+    - talk to you later
+    - signing off
+    - take it easy
+    - peace out
+    - until we meet again
+
+- intent: ask_about_crime
+  examples: |
+    - what is the punishment for [murder](crime)
+    - tell me about [theft](crime)
+    - what are the IPC sections for [robbery](crime)
+    - what happens if someone commits [assault](crime)
+    - what is the penalty for [fraud](crime)
+    - tell me about [cyber crime](crime)
+    - what are the laws regarding [domestic violence](crime)
+    - what IPC section covers [kidnapping](crime)
+    - which IPC section is for [murder](crime)
+    - which law applies to [theft](crime)
+    - what is the section for [robbery](crime)
+    - which IPC covers [assault](crime)
+    - what is the law for [fraud](crime)
+    - which section is for [cyber crime](crime)
+    - which IPC section is for [domestic violence](crime)
+    - which law is for [kidnapping](crime)
+    - what is the IPC for [murder](crime)
+    - what IPC applies to [theft](crime)
+    - which section deals with [robbery](crime)
+    - which IPC section deals with [assault](crime)
+    - which law punishes [fraud](crime)
+    - which IPC section is for [cyber crime](crime)
+    - which law is for [domestic violence](crime)
+    - which section is for [kidnapping](crime)
+    - can you explain [murder](crime)
+    - what's the definition of [theft](crime)
+    - describe [robbery](crime)
+    - what constitutes [assault](crime)
+    - explain [fraud](crime)
+    - what's considered [cyber crime](crime)
+    - define [domestic violence](crime)
+    - what's the meaning of [kidnapping](crime)
+    - what's the legal definition of [murder](crime)
+    - how is [theft](crime) defined in law
+    - what's the legal meaning of [robbery](crime)
+    - how does the law define [assault](crime)
+    - what's the legal interpretation of [fraud](crime)
+    - how is [cyber crime](crime) defined legally
+    - what's the legal definition of [domestic violence](crime)
+    - how does the law define [kidnapping](crime)
+
+- intent: ask_about_ipc
+  examples: |
+    - what is [IPC section 302](ipc_section)
+    - tell me about [section 420](ipc_section)
+    - what does [IPC 376](ipc_section) say
+    - explain [section 307](ipc_section)
+    - what is the punishment in [IPC 302](ipc_section)
+    - what crimes are covered under [section 420](ipc_section)
+    - can you explain [IPC section 302](ipc_section)
+    - what's the meaning of [section 420](ipc_section)
+    - describe [IPC 376](ipc_section)
+    - what's covered in [section 307](ipc_section)
+    - what's the penalty in [IPC 302](ipc_section)
+    - what offenses come under [section 420](ipc_section)
+    - what's the definition of [IPC section 302](ipc_section)
+    - explain the scope of [section 420](ipc_section)
+    - what's the legal meaning of [IPC 376](ipc_section)
+    - what's the interpretation of [section 307](ipc_section)
+    - what's the sentence in [IPC 302](ipc_section)
+    - what crimes are included in [section 420](ipc_section)
+    - what's the legal definition of [IPC section 302](ipc_section)
+    - what's the scope of [section 420](ipc_section)
+    - what's the legal interpretation of [IPC 376](ipc_section)
+    - what's the meaning of [section 307](ipc_section)
+    - what's the punishment under [IPC 302](ipc_section)
+    - what offenses are covered by [section 420](ipc_section)
+
+- intent: ask_about_punishment
+  examples: |
+    - what is the punishment for [murder](crime)
+    - how many years of jail for [theft](crime)
+    - what is the fine for [assault](crime)
+    - what is the maximum punishment for [fraud](crime)
+    - what is the minimum sentence for [robbery](crime)
+    - what is the penalty for [cyber crime](crime)
+    - what is the penalty for [domestic violence](crime)
+    - what is the sentence for [kidnapping](crime)
+    - how long is the sentence for [murder](crime)
+    - what is the jail term for [theft](crime)
+    - what is the maximum jail for [robbery](crime)
+    - what is the minimum punishment for [assault](crime)
+    - what is the highest punishment for [fraud](crime)
+    - what is the lowest sentence for [cyber crime](crime)
+    - what is the jail time for [domestic violence](crime)
+    - what is the sentence for [kidnapping](crime)
+    - what is the legal penalty for [murder](crime)
+    - what is the legal punishment for [theft](crime)
+    - what is the legal sentence for [robbery](crime)
+    - what is the legal penalty for [assault](crime)
+    - what is the legal punishment for [fraud](crime)
+    - what is the legal sentence for [cyber crime](crime)
+    - what is the legal penalty for [domestic violence](crime)
+    - what is the legal punishment for [kidnapping](crime)
+    - what's the maximum jail time for [murder](crime)
+    - what's the minimum fine for [theft](crime)
+    - what's the maximum penalty for [robbery](crime)
+    - what's the minimum sentence for [assault](crime)
+    - what's the maximum punishment for [fraud](crime)
+    - what's the minimum jail term for [cyber crime](crime)
+    - what's the maximum fine for [domestic violence](crime)
+    - what's the minimum penalty for [kidnapping](crime)
+    - what's the highest possible sentence for [murder](crime)
+    - what's the lowest possible fine for [theft](crime)
+    - what's the maximum possible jail time for [robbery](crime)
+    - what's the minimum possible sentence for [assault](crime)
+    - what's the highest possible punishment for [fraud](crime)
+    - what's the lowest possible jail term for [cyber crime](crime)
+    - what's the maximum possible fine for [domestic violence](crime)
+    - what's the minimum possible penalty for [kidnapping](crime)
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What's the weather like?
+    - Book a flight
+    - Play music
+    - Tell me a joke
+    - What's your favorite color?
+    - Can you help me with my homework?
+    - What's the capital of France?
+    - How do I make a cake?
+    - What's the best movie to watch?
+    - Can you translate this to Spanish?
+    - What's the meaning of life?
+    - How do I fix my computer?
+    - What's the recipe for pasta?
+    - Can you help me with my taxes?
+    - What's the best way to learn programming?
+    - How do I lose weight?
+    - What's the best smartphone to buy?
+    - Can you help me with my relationship?
+    - What's the best way to invest money?
+
+- intent: confess_crime
+  examples: |
+    - I have committed [robbery](crime)
+    - I did a [theft](crime)
+    - I have done [murder](crime)
+    - I committed [assault](crime)
+    - I have been involved in [fraud](crime)
+    - I did [cyber crime](crime)
+    - I have committed [domestic violence](crime)
+    - I did [kidnapping](crime)
+    - I have done [cheating](crime)
+    - I committed [criminal breach of trust](crime)
+    - I have been involved in [forgery](crime)
+    - I did [criminal intimidation](crime)
+    - I have committed [rape](crime)
+    - I have done a crime
+    - I committed a crime
+    - I have been involved in criminal activities
+    - I did something illegal
+    - I have broken the law
+    - I committed an offense
+    - I have done something wrong
+    - I am a criminal
+    - I have been involved in illegal activities
+    - I did something against the law
+    - I have committed an illegal act
+    - I have done something unlawful
+    - I just committed [robbery](crime)
+    - I recently did a [theft](crime)
+    - I have just done [murder](crime)
+    - I just committed [assault](crime)
+    - I have recently been involved in [fraud](crime)
+    - I just did [cyber crime](crime)
+    - I have just committed [domestic violence](crime)
+    - I recently did [kidnapping](crime)
+    - I have just done [cheating](crime)
+    - I just committed [criminal breach of trust](crime)
+    - I have recently been involved in [forgery](crime)
+    - I just did [criminal intimidation](crime)
+    - I have just committed [rape](crime)
+    - I recently did a crime
+    - I just committed a crime
+    - I have recently been involved in criminal activities
+    - I just did something illegal
+    - I have recently broken the law
+    - I just committed an offense
+    - I have recently done something wrong
+    - I am currently a criminal
+    - I have recently been involved in illegal activities
+    - I just did something against the law
+    - I have recently committed an illegal act
+    - I just did something unlawful 

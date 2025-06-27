@@ -1,0 +1,90 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - out_of_scope
+  - ask_about_crime
+  - ask_about_punishment
+  - ask_about_ipc
+  - ask_ipc_punishment
+  - confess_crime
+
+entities:
+  - crime
+  - ipc_section
+
+slots:
+  crime:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: crime
+  ipc_section:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ipc_section
+
+responses:
+  utter_greet:
+  - text: "Hello! I'm your Legal AI Assistant. How can I help you today?"
+  - text: "Hi there! I'm here to help you with legal information. What would you like to know?"
+  - text: "Welcome! I'm your legal information assistant. Feel free to ask me about IPC sections and crimes."
+  - text: "Greetings! I'm here to provide information about Indian Penal Code and criminal law. How may I assist you?"
+
+  utter_goodbye:
+  - text: "Goodbye! Feel free to ask if you have more legal questions."
+  - text: "Bye! Remember, I'm here if you need legal information."
+  - text: "Take care! Don't hesitate to return if you have more questions about the law."
+  - text: "Farewell! I'm always here to help with your legal queries."
+
+  utter_iamabot:
+  - text: "I am a Legal AI Assistant, designed to provide information about Indian Penal Code (IPC) sections and crimes."
+  - text: "I'm an AI assistant specialized in providing information about Indian criminal law and IPC sections."
+  - text: "I'm a legal information bot, here to help you understand IPC sections and criminal law."
+  - text: "I'm an AI assistant focused on providing accurate information about Indian Penal Code and crimes."
+
+  utter_happy:
+  - text: "Great! I'm glad I could help."
+  - text: "Excellent! Happy to be of assistance."
+  - text: "Wonderful! Let me know if you need anything else."
+  - text: "Perfect! I'm here if you have more questions."
+
+  utter_cheer_up:
+  - text: "I'm sorry to hear that. Is there something specific about the law that's troubling you?"
+  - text: "I understand this might be difficult. Would you like to know more about any specific legal aspect?"
+  - text: "I'm here to help. Would you like to discuss any particular legal concern?"
+  - text: "Let me know if you need information about any specific legal matter."
+
+  utter_did_that_help:
+  - text: "Did that help you understand the legal information better?"
+  - text: "Was that information helpful for your query?"
+  - text: "Did I answer your question satisfactorily?"
+  - text: "Is there anything else you'd like to know about this?"
+
+  utter_out_of_scope:
+  - text: "I'm sorry, I can only provide information about IPC sections and crimes. Could you please rephrase your question?"
+  - text: "I'm specialized in Indian Penal Code and criminal law. Could you ask me something related to these topics?"
+  - text: "I can only help with questions about IPC sections and crimes. Please ask me something related to these areas."
+  - text: "My expertise is limited to Indian criminal law. Could you please ask me something about IPC sections or crimes?"
+
+  utter_crime_confession:
+  - text: "I notice you're mentioning a crime. If you have committed a crime or are planning to commit one, I strongly advise you to:\n\n1. Contact law enforcement immediately\n2. Seek legal counsel\n3. If you're in immediate danger or experiencing a crisis, please call emergency services\n\nThis is an AI assistant for legal information only. I cannot provide legal advice or handle actual crime reports. For any real legal matters, please consult with law enforcement and legal professionals."
+  - text: "I understand you're discussing a potential crime. I must emphasize that I'm an informational AI assistant and cannot provide legal advice or assistance with criminal activities. If you're involved in a crime, please:\n\n1. Contact law enforcement immediately\n2. Seek legal counsel\n3. Call emergency services if in immediate danger\n\nThis is an AI assistant for legal information only. I cannot handle actual crime reports."
+  - text: "I notice you're discussing a crime. Please note that I'm an informational AI assistant and cannot provide legal advice or assistance with criminal matters. I strongly encourage you to:\n\n1. Contact law enforcement immediately\n2. Seek legal counsel\n3. Call emergency services if in immediate danger\n\nThis is an AI assistant for legal information only. I cannot handle actual crime reports."
+
+actions:
+  - action_query_crime
+  - action_query_ipc_section
+  - action_query_ipc_punishment
+  - action_handle_crime_confession
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

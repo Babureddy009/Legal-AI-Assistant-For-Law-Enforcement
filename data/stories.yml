@@ -1,0 +1,79 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: deny
+  - action: utter_goodbye
+
+- story: ask about crime
+  steps:
+  - intent: ask_about_crime
+  - action: action_query_crime
+
+- story: ask about punishment
+  steps:
+  - intent: ask_about_punishment
+  - action: action_query_crime
+
+- story: ask about IPC section
+  steps:
+  - intent: ask_about_ipc
+  - action: action_query_ipc_section
+
+- story: respond to punishment query
+  steps:
+  - intent: ask_ipc_punishment
+  - action: action_query_ipc_punishment
+
+- story: greet and ask about crime
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_about_crime
+  - action: action_query_crime
+
+- story: ask about crime and then IPC
+  steps:
+  - intent: ask_about_crime
+  - action: action_query_crime
+  - intent: ask_about_ipc
+  - action: action_query_ipc_section
+
+- story: out of scope handling
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: handle cyber crime confession
+  steps:
+  - intent: confess_crime
+  - action: action_handle_crime_confession
+  - action: utter_crime_confession
+  - action: action_query_crime

@@ -1,0 +1,1761 @@
+version: '3.1'
+
+intents:
+  - greet
+  - goodbye
+  - ask_section
+  - ask_punishment
+  - ask_description
+  - ask_title
+  - affirm
+  - deny
+
+entities:
+  - section_number
+
+slots:
+  section_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: section_number
+
+responses:
+  utter_greet:
+  - text: "Hello! I can help you with information about IPC sections. What would you like to know?"
+
+  utter_goodbye:
+  - text: "Goodbye! Feel free to ask if you need more information about IPC sections."
+
+  utter_ask_section:
+  - text: "Which IPC section would you like to know about?"
+
+  utter_ask_more:
+  - text: "Would you like to know more about this section?"
+
+actions:
+
+  utter_section_1:
+  - text: "Section 1: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_2:
+  - text: "Section 2: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_3:
+  - text: "Section 3: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_4:
+  - text: "Section 4: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_5:
+  - text: "Section 5: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_6:
+  - text: "Section 6: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_7:
+  - text: "Section 7: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_8:
+  - text: "Section 8: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_9:
+  - text: "Section 9: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_10:
+  - text: "Section 10: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_11:
+  - text: "Section 11: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_12:
+  - text: "Section 12: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_13:
+  - text: "Section 13: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_14:
+  - text: "Section 14: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_15:
+  - text: "Section 15: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_16:
+  - text: "Section 16: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_17:
+  - text: "Section 17: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_18:
+  - text: "Section 18: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_19:
+  - text: "Section 19: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_20:
+  - text: "Section 20: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_21:
+  - text: "Section 21: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_22:
+  - text: "Section 22: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_23:
+  - text: "Section 23: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_24:
+  - text: "Section 24: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_25:
+  - text: "Section 25: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_26:
+  - text: "Section 26: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_27:
+  - text: "Section 27: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_28:
+  - text: "Section 28: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_29:
+  - text: "Section 29: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_30:
+  - text: "Section 30: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_31:
+  - text: "Section 31: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_32:
+  - text: "Section 32: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_33:
+  - text: "Section 33: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_34:
+  - text: "Section 34: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_35:
+  - text: "Section 35: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_36:
+  - text: "Section 36: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_37:
+  - text: "Section 37: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_38:
+  - text: "Section 38: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_39:
+  - text: "Section 39: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_40:
+  - text: "Section 40: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_41:
+  - text: "Section 41: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_42:
+  - text: "Section 42: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_43:
+  - text: "Section 43: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_44:
+  - text: "Section 44: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_45:
+  - text: "Section 45: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_46:
+  - text: "Section 46: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_47:
+  - text: "Section 47: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_48:
+  - text: "Section 48: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_49:
+  - text: "Section 49: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_50:
+  - text: "Section 50: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_51:
+  - text: "Section 51: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_52:
+  - text: "Section 52: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_53:
+  - text: "Section 53: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_54:
+  - text: "Section 54: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_55:
+  - text: "Section 55: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_56:
+  - text: "Section 56: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_57:
+  - text: "Section 57: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_58:
+  - text: "Section 58: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_59:
+  - text: "Section 59: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_60:
+  - text: "Section 60: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_61:
+  - text: "Section 61: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_62:
+  - text: "Section 62: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_63:
+  - text: "Section 63: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_64:
+  - text: "Section 64: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_65:
+  - text: "Section 65: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_66:
+  - text: "Section 66: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_67:
+  - text: "Section 67: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_68:
+  - text: "Section 68: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_69:
+  - text: "Section 69: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_70:
+  - text: "Section 70: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_71:
+  - text: "Section 71: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_72:
+  - text: "Section 72: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_73:
+  - text: "Section 73: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_74:
+  - text: "Section 74: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_75:
+  - text: "Section 75: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_76:
+  - text: "Section 76: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_77:
+  - text: "Section 77: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_78:
+  - text: "Section 78: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_79:
+  - text: "Section 79: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_80:
+  - text: "Section 80: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_81:
+  - text: "Section 81: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_82:
+  - text: "Section 82: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_83:
+  - text: "Section 83: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_84:
+  - text: "Section 84: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_85:
+  - text: "Section 85: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_86:
+  - text: "Section 86: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_87:
+  - text: "Section 87: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_88:
+  - text: "Section 88: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_89:
+  - text: "Section 89: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_90:
+  - text: "Section 90: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_91:
+  - text: "Section 91: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_92:
+  - text: "Section 92: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_93:
+  - text: "Section 93: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_94:
+  - text: "Section 94: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_95:
+  - text: "Section 95: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_96:
+  - text: "Section 96: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_97:
+  - text: "Section 97: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_98:
+  - text: "Section 98: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_99:
+  - text: "Section 99: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_100:
+  - text: "Section 100: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_101:
+  - text: "Section 101: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_102:
+  - text: "Section 102: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_103:
+  - text: "Section 103: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_104:
+  - text: "Section 104: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_105:
+  - text: "Section 105: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_106:
+  - text: "Section 106: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_107:
+  - text: "Section 107: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_108:
+  - text: "Section 108: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_109:
+  - text: "Section 109: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_110:
+  - text: "Section 110: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_111:
+  - text: "Section 111: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_112:
+  - text: "Section 112: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_113:
+  - text: "Section 113: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_114:
+  - text: "Section 114: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_115:
+  - text: "Section 115: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_116:
+  - text: "Section 116: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_117:
+  - text: "Section 117: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_118:
+  - text: "Section 118: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_119:
+  - text: "Section 119: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_120:
+  - text: "Section 120: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_121:
+  - text: "Section 121: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_122:
+  - text: "Section 122: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_123:
+  - text: "Section 123: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_124:
+  - text: "Section 124: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_125:
+  - text: "Section 125: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_126:
+  - text: "Section 126: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_127:
+  - text: "Section 127: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_128:
+  - text: "Section 128: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_129:
+  - text: "Section 129: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_130:
+  - text: "Section 130: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_131:
+  - text: "Section 131: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_132:
+  - text: "Section 132: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_133:
+  - text: "Section 133: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_134:
+  - text: "Section 134: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_135:
+  - text: "Section 135: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_136:
+  - text: "Section 136: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_137:
+  - text: "Section 137: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_138:
+  - text: "Section 138: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_139:
+  - text: "Section 139: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_140:
+  - text: "Section 140: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_141:
+  - text: "Section 141: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_142:
+  - text: "Section 142: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_143:
+  - text: "Section 143: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_144:
+  - text: "Section 144: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_145:
+  - text: "Section 145: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_146:
+  - text: "Section 146: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_147:
+  - text: "Section 147: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_148:
+  - text: "Section 148: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_149:
+  - text: "Section 149: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_150:
+  - text: "Section 150: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_151:
+  - text: "Section 151: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_152:
+  - text: "Section 152: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_153:
+  - text: "Section 153: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_154:
+  - text: "Section 154: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_155:
+  - text: "Section 155: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_156:
+  - text: "Section 156: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_157:
+  - text: "Section 157: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_158:
+  - text: "Section 158: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_159:
+  - text: "Section 159: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_160:
+  - text: "Section 160: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_161:
+  - text: "Section 161: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_162:
+  - text: "Section 162: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_163:
+  - text: "Section 163: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_164:
+  - text: "Section 164: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_165:
+  - text: "Section 165: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_166:
+  - text: "Section 166: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_167:
+  - text: "Section 167: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_168:
+  - text: "Section 168: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_169:
+  - text: "Section 169: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_170:
+  - text: "Section 170: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171:
+  - text: "Section 171: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_172:
+  - text: "Section 172: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_173:
+  - text: "Section 173: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_174:
+  - text: "Section 174: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_175:
+  - text: "Section 175: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_176:
+  - text: "Section 176: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_177:
+  - text: "Section 177: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_178:
+  - text: "Section 178: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_179:
+  - text: "Section 179: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_180:
+  - text: "Section 180: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_181:
+  - text: "Section 181: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_182:
+  - text: "Section 182: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_183:
+  - text: "Section 183: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_184:
+  - text: "Section 184: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_185:
+  - text: "Section 185: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_186:
+  - text: "Section 186: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_187:
+  - text: "Section 187: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_188:
+  - text: "Section 188: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_189:
+  - text: "Section 189: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_190:
+  - text: "Section 190: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_191:
+  - text: "Section 191: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_192:
+  - text: "Section 192: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_193:
+  - text: "Section 193: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_194:
+  - text: "Section 194: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_195:
+  - text: "Section 195: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_196:
+  - text: "Section 196: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_197:
+  - text: "Section 197: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_198:
+  - text: "Section 198: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_199:
+  - text: "Section 199: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_200:
+  - text: "Section 200: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_201:
+  - text: "Section 201: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_202:
+  - text: "Section 202: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_203:
+  - text: "Section 203: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_204:
+  - text: "Section 204: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_205:
+  - text: "Section 205: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_206:
+  - text: "Section 206: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_207:
+  - text: "Section 207: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_208:
+  - text: "Section 208: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_209:
+  - text: "Section 209: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_210:
+  - text: "Section 210: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_211:
+  - text: "Section 211: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_212:
+  - text: "Section 212: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_213:
+  - text: "Section 213: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_214:
+  - text: "Section 214: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_215:
+  - text: "Section 215: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_216:
+  - text: "Section 216: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_217:
+  - text: "Section 217: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_218:
+  - text: "Section 218: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_219:
+  - text: "Section 219: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_220:
+  - text: "Section 220: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_221:
+  - text: "Section 221: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_222:
+  - text: "Section 222: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_223:
+  - text: "Section 223: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_224:
+  - text: "Section 224: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_225:
+  - text: "Section 225: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_226:
+  - text: "Section 226: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_227:
+  - text: "Section 227: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_228:
+  - text: "Section 228: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_229:
+  - text: "Section 229: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_230:
+  - text: "Section 230: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_231:
+  - text: "Section 231: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_232:
+  - text: "Section 232: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_233:
+  - text: "Section 233: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_234:
+  - text: "Section 234: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_235:
+  - text: "Section 235: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_236:
+  - text: "Section 236: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_237:
+  - text: "Section 237: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_238:
+  - text: "Section 238: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_239:
+  - text: "Section 239: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_240:
+  - text: "Section 240: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_241:
+  - text: "Section 241: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_242:
+  - text: "Section 242: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_243:
+  - text: "Section 243: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_244:
+  - text: "Section 244: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_245:
+  - text: "Section 245: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_246:
+  - text: "Section 246: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_247:
+  - text: "Section 247: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_248:
+  - text: "Section 248: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_249:
+  - text: "Section 249: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_250:
+  - text: "Section 250: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_251:
+  - text: "Section 251: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_252:
+  - text: "Section 252: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_253:
+  - text: "Section 253: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_254:
+  - text: "Section 254: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_255:
+  - text: "Section 255: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_256:
+  - text: "Section 256: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_257:
+  - text: "Section 257: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_258:
+  - text: "Section 258: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_259:
+  - text: "Section 259: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_260:
+  - text: "Section 260: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_261:
+  - text: "Section 261: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_262:
+  - text: "Section 262: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_263:
+  - text: "Section 263: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_264:
+  - text: "Section 264: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_265:
+  - text: "Section 265: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_266:
+  - text: "Section 266: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_267:
+  - text: "Section 267: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_268:
+  - text: "Section 268: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_269:
+  - text: "Section 269: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_270:
+  - text: "Section 270: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_271:
+  - text: "Section 271: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_272:
+  - text: "Section 272: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_273:
+  - text: "Section 273: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_274:
+  - text: "Section 274: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_275:
+  - text: "Section 275: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_276:
+  - text: "Section 276: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_277:
+  - text: "Section 277: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_278:
+  - text: "Section 278: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_279:
+  - text: "Section 279: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_280:
+  - text: "Section 280: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_281:
+  - text: "Section 281: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_282:
+  - text: "Section 282: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_283:
+  - text: "Section 283: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_284:
+  - text: "Section 284: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_285:
+  - text: "Section 285: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_286:
+  - text: "Section 286: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_287:
+  - text: "Section 287: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_288:
+  - text: "Section 288: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_289:
+  - text: "Section 289: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_290:
+  - text: "Section 290: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_291:
+  - text: "Section 291: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_292:
+  - text: "Section 292: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_293:
+  - text: "Section 293: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_294:
+  - text: "Section 294: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_295:
+  - text: "Section 295: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_296:
+  - text: "Section 296: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_297:
+  - text: "Section 297: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_298:
+  - text: "Section 298: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_299:
+  - text: "Section 299: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_300:
+  - text: "Section 300: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_301:
+  - text: "Section 301: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_302:
+  - text: "Section 302: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_303:
+  - text: "Section 303: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_304:
+  - text: "Section 304: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_305:
+  - text: "Section 305: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_306:
+  - text: "Section 306: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_307:
+  - text: "Section 307: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_308:
+  - text: "Section 308: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_309:
+  - text: "Section 309: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_310:
+  - text: "Section 310: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_311:
+  - text: "Section 311: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_312:
+  - text: "Section 312: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_313:
+  - text: "Section 313: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_314:
+  - text: "Section 314: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_315:
+  - text: "Section 315: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_316:
+  - text: "Section 316: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_317:
+  - text: "Section 317: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_318:
+  - text: "Section 318: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_319:
+  - text: "Section 319: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_320:
+  - text: "Section 320: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_321:
+  - text: "Section 321: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_322:
+  - text: "Section 322: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_323:
+  - text: "Section 323: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_324:
+  - text: "Section 324: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_325:
+  - text: "Section 325: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_326:
+  - text: "Section 326: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_327:
+  - text: "Section 327: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_328:
+  - text: "Section 328: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_329:
+  - text: "Section 329: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_330:
+  - text: "Section 330: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_331:
+  - text: "Section 331: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_332:
+  - text: "Section 332: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_333:
+  - text: "Section 333: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_334:
+  - text: "Section 334: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_335:
+  - text: "Section 335: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_336:
+  - text: "Section 336: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_337:
+  - text: "Section 337: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_338:
+  - text: "Section 338: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_339:
+  - text: "Section 339: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_340:
+  - text: "Section 340: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_341:
+  - text: "Section 341: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_342:
+  - text: "Section 342: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_343:
+  - text: "Section 343: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_344:
+  - text: "Section 344: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_345:
+  - text: "Section 345: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_346:
+  - text: "Section 346: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_347:
+  - text: "Section 347: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_348:
+  - text: "Section 348: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_349:
+  - text: "Section 349: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_350:
+  - text: "Section 350: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_351:
+  - text: "Section 351: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_352:
+  - text: "Section 352: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_353:
+  - text: "Section 353: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_354:
+  - text: "Section 354: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_355:
+  - text: "Section 355: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_356:
+  - text: "Section 356: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_357:
+  - text: "Section 357: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_358:
+  - text: "Section 358: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_359:
+  - text: "Section 359: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_360:
+  - text: "Section 360: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_361:
+  - text: "Section 361: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_362:
+  - text: "Section 362: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_363:
+  - text: "Section 363: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_364:
+  - text: "Section 364: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_365:
+  - text: "Section 365: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_366:
+  - text: "Section 366: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_367:
+  - text: "Section 367: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_368:
+  - text: "Section 368: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_369:
+  - text: "Section 369: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_370:
+  - text: "Section 370: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_371:
+  - text: "Section 371: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_372:
+  - text: "Section 372: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_373:
+  - text: "Section 373: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_374:
+  - text: "Section 374: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_375:
+  - text: "Section 375: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376:
+  - text: "Section 376: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_377:
+  - text: "Section 377: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_378:
+  - text: "Section 378: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_379:
+  - text: "Section 379: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_380:
+  - text: "Section 380: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_381:
+  - text: "Section 381: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_382:
+  - text: "Section 382: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_383:
+  - text: "Section 383: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_384:
+  - text: "Section 384: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_385:
+  - text: "Section 385: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_386:
+  - text: "Section 386: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_387:
+  - text: "Section 387: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_388:
+  - text: "Section 388: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_389:
+  - text: "Section 389: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_390:
+  - text: "Section 390: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_391:
+  - text: "Section 391: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_392:
+  - text: "Section 392: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_393:
+  - text: "Section 393: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_394:
+  - text: "Section 394: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_395:
+  - text: "Section 395: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_396:
+  - text: "Section 396: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_397:
+  - text: "Section 397: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_398:
+  - text: "Section 398: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_399:
+  - text: "Section 399: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_400:
+  - text: "Section 400: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_401:
+  - text: "Section 401: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_402:
+  - text: "Section 402: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_403:
+  - text: "Section 403: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_404:
+  - text: "Section 404: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_405:
+  - text: "Section 405: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_406:
+  - text: "Section 406: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_407:
+  - text: "Section 407: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_408:
+  - text: "Section 408: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_409:
+  - text: "Section 409: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_410:
+  - text: "Section 410: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_411:
+  - text: "Section 411: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_412:
+  - text: "Section 412: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_413:
+  - text: "Section 413: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_414:
+  - text: "Section 414: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_415:
+  - text: "Section 415: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_416:
+  - text: "Section 416: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_417:
+  - text: "Section 417: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_418:
+  - text: "Section 418: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_419:
+  - text: "Section 419: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_420:
+  - text: "Section 420: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_421:
+  - text: "Section 421: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_422:
+  - text: "Section 422: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_423:
+  - text: "Section 423: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_424:
+  - text: "Section 424: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_425:
+  - text: "Section 425: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_426:
+  - text: "Section 426: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_427:
+  - text: "Section 427: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_428:
+  - text: "Section 428: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_429:
+  - text: "Section 429: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_430:
+  - text: "Section 430: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_431:
+  - text: "Section 431: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_432:
+  - text: "Section 432: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_433:
+  - text: "Section 433: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_434:
+  - text: "Section 434: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_435:
+  - text: "Section 435: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_436:
+  - text: "Section 436: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_437:
+  - text: "Section 437: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_438:
+  - text: "Section 438: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_439:
+  - text: "Section 439: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_440:
+  - text: "Section 440: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_441:
+  - text: "Section 441: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_442:
+  - text: "Section 442: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_443:
+  - text: "Section 443: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_444:
+  - text: "Section 444: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_445:
+  - text: "Section 445: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_446:
+  - text: "Section 446: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_447:
+  - text: "Section 447: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_448:
+  - text: "Section 448: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_449:
+  - text: "Section 449: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_450:
+  - text: "Section 450: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_451:
+  - text: "Section 451: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_452:
+  - text: "Section 452: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_453:
+  - text: "Section 453: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_454:
+  - text: "Section 454: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_455:
+  - text: "Section 455: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_456:
+  - text: "Section 456: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_457:
+  - text: "Section 457: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_458:
+  - text: "Section 458: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_459:
+  - text: "Section 459: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_460:
+  - text: "Section 460: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_461:
+  - text: "Section 461: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_462:
+  - text: "Section 462: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_463:
+  - text: "Section 463: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_464:
+  - text: "Section 464: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_465:
+  - text: "Section 465: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_466:
+  - text: "Section 466: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_467:
+  - text: "Section 467: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_468:
+  - text: "Section 468: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_469:
+  - text: "Section 469: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_470:
+  - text: "Section 470: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_471:
+  - text: "Section 471: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_472:
+  - text: "Section 472: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_473:
+  - text: "Section 473: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_474:
+  - text: "Section 474: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_475:
+  - text: "Section 475: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_476:
+  - text: "Section 476: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_477:
+  - text: "Section 477: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_478:
+  - text: "Section 478: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_479:
+  - text: "Section 479: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_480:
+  - text: "Section 480: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_481:
+  - text: "Section 481: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_482:
+  - text: "Section 482: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_483:
+  - text: "Section 483: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_484:
+  - text: "Section 484: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_485:
+  - text: "Section 485: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_486:
+  - text: "Section 486: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_487:
+  - text: "Section 487: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_488:
+  - text: "Section 488: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_489:
+  - text: "Section 489: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_490:
+  - text: "Section 490: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_491:
+  - text: "Section 491: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_492:
+  - text: "Section 492: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_493:
+  - text: "Section 493: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_494:
+  - text: "Section 494: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_495:
+  - text: "Section 495: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_496:
+  - text: "Section 496: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_497:
+  - text: "Section 497: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_498:
+  - text: "Section 498: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_499:
+  - text: "Section 499: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_500:
+  - text: "Section 500: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_501:
+  - text: "Section 501: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_502:
+  - text: "Section 502: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_503:
+  - text: "Section 503: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_504:
+  - text: "Section 504: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_505:
+  - text: "Section 505: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_506:
+  - text: "Section 506: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_507:
+  - text: "Section 507: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_508:
+  - text: "Section 508: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_509:
+  - text: "Section 509: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_510:
+  - text: "Section 510: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_511:
+  - text: "Section 511: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_108A:
+  - text: "Section 108A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_120A:
+  - text: "Section 120A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_120B:
+  - text: "Section 120B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_121A:
+  - text: "Section 121A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_124A:
+  - text: "Section 124A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_138A:
+  - text: "Section 138A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_153A:
+  - text: "Section 153A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_153AA:
+  - text: "Section 153AA: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_153B:
+  - text: "Section 153B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_165A:
+  - text: "Section 165A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_166A:
+  - text: "Section 166A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_166B:
+  - text: "Section 166B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171A:
+  - text: "Section 171A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171B:
+  - text: "Section 171B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171C:
+  - text: "Section 171C: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171D:
+  - text: "Section 171D: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171E:
+  - text: "Section 171E: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171F:
+  - text: "Section 171F: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171G:
+  - text: "Section 171G: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171H:
+  - text: "Section 171H: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_171I:
+  - text: "Section 171I: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_174A:
+  - text: "Section 174A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_195A:
+  - text: "Section 195A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_216A:
+  - text: "Section 216A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_216B:
+  - text: "Section 216B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_225A:
+  - text: "Section 225A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_225B:
+  - text: "Section 225B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_228A:
+  - text: "Section 228A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_229A:
+  - text: "Section 229A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_263A:
+  - text: "Section 263A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_294A:
+  - text: "Section 294A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_295A:
+  - text: "Section 295A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_29A:
+  - text: "Section 29A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_304A:
+  - text: "Section 304A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_304B:
+  - text: "Section 304B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_326A:
+  - text: "Section 326A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_326B:
+  - text: "Section 326B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_354A:
+  - text: "Section 354A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_354B:
+  - text: "Section 354B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_354C:
+  - text: "Section 354C: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_354D:
+  - text: "Section 354D: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_363A:
+  - text: "Section 363A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_364A:
+  - text: "Section 364A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_366A:
+  - text: "Section 366A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_366B:
+  - text: "Section 366B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_370A:
+  - text: "Section 370A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376A:
+  - text: "Section 376A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376AB:
+  - text: "Section 376AB: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376B:
+  - text: "Section 376B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376C:
+  - text: "Section 376C: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376D:
+  - text: "Section 376D: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376DA:
+  - text: "Section 376DA: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376DB:
+  - text: "Section 376DB: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_376E:
+  - text: "Section 376E: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_477A:
+  - text: "Section 477A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_489A:
+  - text: "Section 489A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_489B:
+  - text: "Section 489B: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_489C:
+  - text: "Section 489C: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_489D:
+  - text: "Section 489D: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_489E:
+  - text: "Section 489E: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_498A:
+  - text: "Section 498A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_52A:
+  - text: "Section 52A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_53A:
+  - text: "Section 53A: A Lawyers Reference\n\nDescription: \n\nPunishment: "
+
+  utter_section_55A:
+  - text: "Section 55A: A Lawyers Reference\n\nDescription: \n\nPunishment: "

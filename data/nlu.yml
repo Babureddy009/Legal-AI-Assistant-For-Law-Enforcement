@@ -1,0 +1,874 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What's the weather like?
+    - Can you help me with my homework?
+    - Tell me a joke
+    - What's your favorite color?
+    - Can you play music?
+    - What time is it?
+    - What's the date today?
+    - Can you make a reservation?
+    - I need help with my taxes
+    - Can you translate this for me?
+    - What's the stock market doing?
+    - Can you book a flight?
+    - I need a recipe
+    - What's the traffic like?
+
+- intent: ask_about_crime
+  examples: |
+    - What is [murder](crime)?
+    - Tell me about [rape](crime)
+    - What is [theft](crime)?
+    - Can you explain [robbery](crime)?
+    - What does [assault](crime) mean?
+    - Tell me about [kidnapping](crime)
+    - What is [sexual assault](crime)?
+    - Can you explain [burglary](crime)?
+    - What does [extortion](crime) mean?
+    - Tell me about [forgery](crime)
+    - What is [cybercrime](crime)?
+    - Can you explain [fraud](crime)?
+    - What does [embezzlement](crime) mean?
+    - Tell me about [perjury](crime)
+    - What is [bribery](crime)?
+    - What is cyber crime?
+    - Tell me about cyber crime
+    - What is cybercrime?
+    - Can you explain cyber crime?
+    - What does cyber crime mean?
+    - What is online fraud?
+    - Tell me about internet fraud
+    - What is digital fraud?
+    - Can you explain computer fraud?
+    - What does electronic fraud mean?
+    - I want to know about cyber crime
+    - I need information about cyber crime
+    - Can you tell me about cyber crime?
+    - I would like to know about cyber crime
+    - Please explain cyber crime to me
+    - What is [dowry](crime)?
+    - Tell me about [sexual harassment](crime)
+    - What is [terrorism](crime)?
+    - Can you explain [dowry](crime)?
+    - What does [sexual harassment](crime) mean?
+    - Tell me about [terrorism](crime)
+    - What is the law for [dowry](crime)?
+    - What is the law for [sexual harassment](crime)?
+    - What is the law for [terrorism](crime)?
+
+- intent: ask_about_punishment
+  examples: |
+    - What is the punishment for [murder](crime)?
+    - What's the penalty for [rape](crime)?
+    - What happens if someone commits [theft](crime)?
+    - What's the punishment for [robbery](crime)?
+    - What's the penalty for [assault](crime)?
+    - What happens if someone commits [kidnapping](crime)?
+    - What's the punishment for [sexual assault](crime)?
+    - What's the penalty for [burglary](crime)?
+    - What happens if someone commits [extortion](crime)?
+    - What's the punishment for [forgery](crime)?
+    - What's the penalty for [cybercrime](crime)?
+    - What happens if someone commits [fraud](crime)?
+    - What's the punishment for [embezzlement](crime)?
+    - What's the penalty for [perjury](crime)?
+    - What happens if someone commits [bribery](crime)?
+    - What is the punishment for [dowry](crime)?
+    - What's the penalty for [sexual harassment](crime)?
+    - What happens if someone commits [terrorism](crime)?
+    - What's the punishment for [terrorism](crime)?
+    - What's the penalty for [dowry](crime)?
+    - What happens if someone commits [sexual harassment](crime)?
+
+- intent: ask_about_ipc
+  examples: |
+    - What is [IPC Section 1](ipc_section)?
+    - What is [section 2](ipc_section)?
+    - Tell me about [section 10](ipc_section)
+    - Explain [section 50](ipc_section)
+    - What does [IPC Section 100](ipc_section) say?
+    - What is [section 120B](ipc_section)?
+    - Can you explain [IPC Section 144](ipc_section)?
+    - What is [section 153A](ipc_section)?
+    - Tell me about [section 186](ipc_section)
+    - What is [section 188](ipc_section)?
+    - What is [section 200](ipc_section)?
+    - What is [section 222](ipc_section)?
+    - What is [section 302](ipc_section)?
+    - What is [section 304B](ipc_section)?
+    - What is [section 307](ipc_section)?
+    - What is [section 354](ipc_section)?
+    - What is [section 376](ipc_section)?
+    - What is [section 420](ipc_section)?
+    - What is [section 498A](ipc_section)?
+    - What is [section 509](ipc_section)?
+    - What is [section 511](ipc_section)?
+    - What is [section 66A](ipc_section)?
+    - What is [section 66C](ipc_section)?
+    - What is [section 66D](ipc_section)?
+    - What is [section 66E](ipc_section)?
+    - What is [section 66F](ipc_section)?
+    - What is [section 124A](ipc_section)?
+    - What is [section 295A](ipc_section)?
+    - What is [section 304A](ipc_section)?
+    - What is [section 376D](ipc_section)?
+    - What is [section 489A](ipc_section)?
+    - What is [section 153B](ipc_section)?
+    - What is [section 120A](ipc_section)?
+    - What is [section 228A](ipc_section)?
+    - What is [section 171E](ipc_section)?
+    - What is [section 193](ipc_section)?
+    - What is [section 409](ipc_section)?
+    - What is [section 465](ipc_section)?
+    - What is [section 380](ipc_section)?
+    - What is [section 384](ipc_section)?
+    - What is [section 363](ipc_section)?
+    - What is [section 392](ipc_section)?
+    - What is [section 379](ipc_section)?
+    - What is [section 354A](ipc_section)?
+    - What is [section 500](ipc_section)?
+    - What is [section 34](ipc_section)?
+    - What is [section 149](ipc_section)?
+    - What is [section 120B](ipc_section)?
+    - Tell me about [section 3](ipc_section)
+    - Tell me about [section 4](ipc_section)
+    - Tell me about [section 5](ipc_section)
+    - Tell me about [section 6](ipc_section)
+    - Tell me about [section 7](ipc_section)
+    - Tell me about [section 8](ipc_section)
+    - Tell me about [section 9](ipc_section)
+    - Tell me about [section 11](ipc_section)
+    - Tell me about [section 12](ipc_section)
+    - Tell me about [section 13](ipc_section)
+    - Tell me about [section 14](ipc_section)
+    - Tell me about [section 15](ipc_section)
+    - Tell me about [section 16](ipc_section)
+    - Tell me about [section 17](ipc_section)
+    - Tell me about [section 18](ipc_section)
+    - Tell me about [section 19](ipc_section)
+    - Tell me about [section 20](ipc_section)
+    - Tell me about [section 21](ipc_section)
+    - Tell me about [section 22](ipc_section)
+    - Tell me about [section 23](ipc_section)
+    - Tell me about [section 24](ipc_section)
+    - Tell me about [section 25](ipc_section)
+    - Tell me about [section 26](ipc_section)
+    - Tell me about [section 27](ipc_section)
+    - Tell me about [section 28](ipc_section)
+    - Tell me about [section 29](ipc_section)
+    - Tell me about [section 30](ipc_section)
+    - Tell me about [section 31](ipc_section)
+    - Tell me about [section 32](ipc_section)
+    - Tell me about [section 33](ipc_section)
+    - Tell me about [section 35](ipc_section)
+    - Tell me about [section 36](ipc_section)
+    - Tell me about [section 37](ipc_section)
+    - Tell me about [section 38](ipc_section)
+    - Tell me about [section 39](ipc_section)
+    - Tell me about [section 40](ipc_section)
+    - Tell me about [section 41](ipc_section)
+    - Tell me about [section 42](ipc_section)
+    - Tell me about [section 43](ipc_section)
+    - Tell me about [section 44](ipc_section)
+    - Tell me about [section 45](ipc_section)
+    - Tell me about [section 46](ipc_section)
+    - Tell me about [section 47](ipc_section)
+    - Tell me about [section 48](ipc_section)
+    - Tell me about [section 49](ipc_section)
+    - Tell me about [section 51](ipc_section)
+    - Tell me about [section 52](ipc_section)
+    - Tell me about [section 53](ipc_section)
+    - Tell me about [section 54](ipc_section)
+    - Tell me about [section 55](ipc_section)
+    - Tell me about [section 56](ipc_section)
+    - Tell me about [section 57](ipc_section)
+    - Tell me about [section 58](ipc_section)
+    - Tell me about [section 59](ipc_section)
+    - Tell me about [section 60](ipc_section)
+    - Tell me about [section 61](ipc_section)
+    - Tell me about [section 62](ipc_section)
+    - Tell me about [section 63](ipc_section)
+    - Tell me about [section 64](ipc_section)
+    - Tell me about [section 65](ipc_section)
+    - Tell me about [section 67](ipc_section)
+    - Tell me about [section 68](ipc_section)
+    - Tell me about [section 69](ipc_section)
+    - Tell me about [section 70](ipc_section)
+    - Tell me about [section 71](ipc_section)
+    - Tell me about [section 72](ipc_section)
+    - Tell me about [section 73](ipc_section)
+    - Tell me about [section 74](ipc_section)
+    - Tell me about [section 75](ipc_section)
+    - Tell me about [section 76](ipc_section)
+    - Tell me about [section 77](ipc_section)
+    - Tell me about [section 78](ipc_section)
+    - Tell me about [section 79](ipc_section)
+    - Tell me about [section 80](ipc_section)
+    - Tell me about [section 81](ipc_section)
+    - Tell me about [section 82](ipc_section)
+    - Tell me about [section 83](ipc_section)
+    - Tell me about [section 84](ipc_section)
+    - Tell me about [section 85](ipc_section)
+    - Tell me about [section 86](ipc_section)
+    - Tell me about [section 87](ipc_section)
+    - Tell me about [section 88](ipc_section)
+    - Tell me about [section 89](ipc_section)
+    - Tell me about [section 90](ipc_section)
+    - Tell me about [section 91](ipc_section)
+    - Tell me about [section 92](ipc_section)
+    - Tell me about [section 93](ipc_section)
+    - Tell me about [section 94](ipc_section)
+    - Tell me about [section 95](ipc_section)
+    - Tell me about [section 96](ipc_section)
+    - Tell me about [section 97](ipc_section)
+    - Tell me about [section 98](ipc_section)
+    - Tell me about [section 99](ipc_section)
+    - Tell me about [section 101](ipc_section)
+    - Tell me about [section 102](ipc_section)
+    - Tell me about [section 103](ipc_section)
+    - Tell me about [section 104](ipc_section)
+    - Tell me about [section 105](ipc_section)
+    - Tell me about [section 106](ipc_section)
+    - Tell me about [section 107](ipc_section)
+    - Tell me about [section 108](ipc_section)
+    - Tell me about [section 109](ipc_section)
+    - Tell me about [section 110](ipc_section)
+    - Tell me about [section 111](ipc_section)
+    - Tell me about [section 112](ipc_section)
+    - Tell me about [section 113](ipc_section)
+    - Tell me about [section 114](ipc_section)
+    - Tell me about [section 115](ipc_section)
+    - Tell me about [section 116](ipc_section)
+    - Tell me about [section 117](ipc_section)
+    - Tell me about [section 118](ipc_section)
+    - Tell me about [section 119](ipc_section)
+    - Tell me about [section 121](ipc_section)
+    - Tell me about [section 122](ipc_section)
+    - Tell me about [section 123](ipc_section)
+    - Tell me about [section 125](ipc_section)
+    - Tell me about [section 126](ipc_section)
+    - Tell me about [section 127](ipc_section)
+    - Tell me about [section 128](ipc_section)
+    - Tell me about [section 129](ipc_section)
+    - Tell me about [section 130](ipc_section)
+    - Tell me about [section 131](ipc_section)
+    - Tell me about [section 132](ipc_section)
+    - Tell me about [section 133](ipc_section)
+    - Tell me about [section 134](ipc_section)
+    - Tell me about [section 135](ipc_section)
+    - Tell me about [section 136](ipc_section)
+    - Tell me about [section 137](ipc_section)
+    - Tell me about [section 138](ipc_section)
+    - Tell me about [section 139](ipc_section)
+    - Tell me about [section 140](ipc_section)
+    - Tell me about [section 141](ipc_section)
+    - Tell me about [section 142](ipc_section)
+    - Tell me about [section 143](ipc_section)
+    - Tell me about [section 145](ipc_section)
+    - Tell me about [section 146](ipc_section)
+    - Tell me about [section 147](ipc_section)
+    - Tell me about [section 148](ipc_section)
+    - Tell me about [section 150](ipc_section)
+    - Tell me about [section 151](ipc_section)
+    - Tell me about [section 152](ipc_section)
+    - Tell me about [section 154](ipc_section)
+    - Tell me about [section 155](ipc_section)
+    - Tell me about [section 156](ipc_section)
+    - Tell me about [section 157](ipc_section)
+    - Tell me about [section 158](ipc_section)
+    - Tell me about [section 159](ipc_section)
+    - Tell me about [section 160](ipc_section)
+    - Tell me about [section 161](ipc_section)
+    - Tell me about [section 162](ipc_section)
+    - Tell me about [section 163](ipc_section)
+    - Tell me about [section 164](ipc_section)
+    - Tell me about [section 165](ipc_section)
+    - Tell me about [section 166](ipc_section)
+    - Tell me about [section 167](ipc_section)
+    - Tell me about [section 168](ipc_section)
+    - Tell me about [section 169](ipc_section)
+    - Tell me about [section 170](ipc_section)
+    - Tell me about [section 172](ipc_section)
+    - Tell me about [section 173](ipc_section)
+    - Tell me about [section 174](ipc_section)
+    - Tell me about [section 175](ipc_section)
+    - Tell me about [section 176](ipc_section)
+    - Tell me about [section 177](ipc_section)
+    - Tell me about [section 178](ipc_section)
+    - Tell me about [section 179](ipc_section)
+    - Tell me about [section 180](ipc_section)
+    - Tell me about [section 181](ipc_section)
+    - Tell me about [section 182](ipc_section)
+    - Tell me about [section 183](ipc_section)
+    - Tell me about [section 184](ipc_section)
+    - Tell me about [section 185](ipc_section)
+    - Tell me about [section 187](ipc_section)
+    - Tell me about [section 189](ipc_section)
+    - Tell me about [section 190](ipc_section)
+    - Tell me about [section 191](ipc_section)
+    - Tell me about [section 192](ipc_section)
+    - Tell me about [section 194](ipc_section)
+    - Tell me about [section 195](ipc_section)
+    - Tell me about [section 196](ipc_section)
+    - Tell me about [section 197](ipc_section)
+    - Tell me about [section 198](ipc_section)
+    - Tell me about [section 199](ipc_section)
+    - Tell me about [section 201](ipc_section)
+    - Tell me about [section 202](ipc_section)
+    - Tell me about [section 203](ipc_section)
+    - Tell me about [section 204](ipc_section)
+    - Tell me about [section 205](ipc_section)
+    - Tell me about [section 206](ipc_section)
+    - Tell me about [section 207](ipc_section)
+    - Tell me about [section 208](ipc_section)
+    - Tell me about [section 209](ipc_section)
+    - Tell me about [section 210](ipc_section)
+    - Tell me about [section 211](ipc_section)
+    - Tell me about [section 212](ipc_section)
+    - Tell me about [section 213](ipc_section)
+    - Tell me about [section 214](ipc_section)
+    - Tell me about [section 215](ipc_section)
+    - Tell me about [section 216](ipc_section)
+    - Tell me about [section 217](ipc_section)
+    - Tell me about [section 218](ipc_section)
+    - Tell me about [section 219](ipc_section)
+    - Tell me about [section 220](ipc_section)
+    - Tell me about [section 221](ipc_section)
+    - Tell me about [section 223](ipc_section)
+    - Tell me about [section 224](ipc_section)
+    - Tell me about [section 225](ipc_section)
+    - Tell me about [section 226](ipc_section)
+    - Tell me about [section 227](ipc_section)
+    - Tell me about [section 229](ipc_section)
+    - Tell me about [section 230](ipc_section)
+    - Tell me about [section 231](ipc_section)
+    - Tell me about [section 232](ipc_section)
+    - Tell me about [section 233](ipc_section)
+    - Tell me about [section 234](ipc_section)
+    - Tell me about [section 235](ipc_section)
+    - Tell me about [section 236](ipc_section)
+    - Tell me about [section 237](ipc_section)
+    - Tell me about [section 238](ipc_section)
+    - Tell me about [section 239](ipc_section)
+    - Tell me about [section 240](ipc_section)
+    - Tell me about [section 241](ipc_section)
+    - Tell me about [section 242](ipc_section)
+    - Tell me about [section 243](ipc_section)
+    - Tell me about [section 244](ipc_section)
+    - Tell me about [section 245](ipc_section)
+    - Tell me about [section 246](ipc_section)
+    - Tell me about [section 247](ipc_section)
+    - Tell me about [section 248](ipc_section)
+    - Tell me about [section 249](ipc_section)
+    - Tell me about [section 250](ipc_section)
+    - Tell me about [section 251](ipc_section)
+    - Tell me about [section 252](ipc_section)
+    - Tell me about [section 253](ipc_section)
+    - Tell me about [section 254](ipc_section)
+    - Tell me about [section 255](ipc_section)
+    - Tell me about [section 256](ipc_section)
+    - Tell me about [section 257](ipc_section)
+    - Tell me about [section 258](ipc_section)
+    - Tell me about [section 259](ipc_section)
+    - Tell me about [section 260](ipc_section)
+    - Tell me about [section 261](ipc_section)
+    - Tell me about [section 262](ipc_section)
+    - Tell me about [section 263](ipc_section)
+    - Tell me about [section 264](ipc_section)
+    - Tell me about [section 265](ipc_section)
+    - Tell me about [section 266](ipc_section)
+    - Tell me about [section 267](ipc_section)
+    - Tell me about [section 268](ipc_section)
+    - Tell me about [section 269](ipc_section)
+    - Tell me about [section 270](ipc_section)
+    - Tell me about [section 271](ipc_section)
+    - Tell me about [section 272](ipc_section)
+    - Tell me about [section 273](ipc_section)
+    - Tell me about [section 274](ipc_section)
+    - Tell me about [section 275](ipc_section)
+    - Tell me about [section 276](ipc_section)
+    - Tell me about [section 277](ipc_section)
+    - Tell me about [section 278](ipc_section)
+    - Tell me about [section 279](ipc_section)
+    - Tell me about [section 280](ipc_section)
+    - Tell me about [section 281](ipc_section)
+    - Tell me about [section 282](ipc_section)
+    - Tell me about [section 283](ipc_section)
+    - Tell me about [section 284](ipc_section)
+    - Tell me about [section 285](ipc_section)
+    - Tell me about [section 286](ipc_section)
+    - Tell me about [section 287](ipc_section)
+    - Tell me about [section 288](ipc_section)
+    - Tell me about [section 289](ipc_section)
+    - Tell me about [section 290](ipc_section)
+    - Tell me about [section 291](ipc_section)
+    - Tell me about [section 292](ipc_section)
+    - Tell me about [section 293](ipc_section)
+    - Tell me about [section 294](ipc_section)
+    - Tell me about [section 295](ipc_section)
+    - Tell me about [section 296](ipc_section)
+    - Tell me about [section 297](ipc_section)
+    - Tell me about [section 298](ipc_section)
+    - Tell me about [section 299](ipc_section)
+    - Tell me about [section 300](ipc_section)
+    - Tell me about [section 301](ipc_section)
+    - Tell me about [section 303](ipc_section)
+    - Tell me about [section 304](ipc_section)
+    - Tell me about [section 305](ipc_section)
+    - Tell me about [section 306](ipc_section)
+    - Tell me about [section 308](ipc_section)
+    - Tell me about [section 309](ipc_section)
+    - Tell me about [section 310](ipc_section)
+    - Tell me about [section 311](ipc_section)
+    - Tell me about [section 312](ipc_section)
+    - Tell me about [section 313](ipc_section)
+    - Tell me about [section 314](ipc_section)
+    - Tell me about [section 315](ipc_section)
+    - Tell me about [section 316](ipc_section)
+    - Tell me about [section 317](ipc_section)
+    - Tell me about [section 318](ipc_section)
+    - Tell me about [section 319](ipc_section)
+    - Tell me about [section 320](ipc_section)
+    - Tell me about [section 321](ipc_section)
+    - Tell me about [section 322](ipc_section)
+    - Tell me about [section 323](ipc_section)
+    - Tell me about [section 324](ipc_section)
+    - Tell me about [section 325](ipc_section)
+    - Tell me about [section 326](ipc_section)
+    - Tell me about [section 327](ipc_section)
+    - Tell me about [section 328](ipc_section)
+    - Tell me about [section 329](ipc_section)
+    - Tell me about [section 330](ipc_section)
+    - Tell me about [section 331](ipc_section)
+    - Tell me about [section 332](ipc_section)
+    - Tell me about [section 333](ipc_section)
+    - Tell me about [section 334](ipc_section)
+    - Tell me about [section 335](ipc_section)
+    - Tell me about [section 336](ipc_section)
+    - Tell me about [section 337](ipc_section)
+    - Tell me about [section 338](ipc_section)
+    - Tell me about [section 339](ipc_section)
+    - Tell me about [section 340](ipc_section)
+    - Tell me about [section 341](ipc_section)
+    - Tell me about [section 342](ipc_section)
+    - Tell me about [section 343](ipc_section)
+    - Tell me about [section 344](ipc_section)
+    - Tell me about [section 345](ipc_section)
+    - Tell me about [section 346](ipc_section)
+    - Tell me about [section 347](ipc_section)
+    - Tell me about [section 348](ipc_section)
+    - Tell me about [section 349](ipc_section)
+    - Tell me about [section 350](ipc_section)
+    - Tell me about [section 351](ipc_section)
+    - Tell me about [section 352](ipc_section)
+    - Tell me about [section 353](ipc_section)
+    - Tell me about [section 355](ipc_section)
+    - Tell me about [section 356](ipc_section)
+    - Tell me about [section 357](ipc_section)
+    - Tell me about [section 358](ipc_section)
+    - Tell me about [section 359](ipc_section)
+    - Tell me about [section 360](ipc_section)
+    - Tell me about [section 361](ipc_section)
+    - Tell me about [section 362](ipc_section)
+    - Tell me about [section 364](ipc_section)
+    - Tell me about [section 365](ipc_section)
+    - Tell me about [section 366](ipc_section)
+    - Tell me about [section 367](ipc_section)
+    - Tell me about [section 368](ipc_section)
+    - Tell me about [section 369](ipc_section)
+    - Tell me about [section 370](ipc_section)
+    - Tell me about [section 371](ipc_section)
+    - Tell me about [section 372](ipc_section)
+    - Tell me about [section 373](ipc_section)
+    - Tell me about [section 374](ipc_section)
+    - Tell me about [section 375](ipc_section)
+    - Tell me about [section 377](ipc_section)
+    - Tell me about [section 378](ipc_section)
+    - Tell me about [section 381](ipc_section)
+    - Tell me about [section 382](ipc_section)
+    - Tell me about [section 383](ipc_section)
+    - Tell me about [section 385](ipc_section)
+    - Tell me about [section 386](ipc_section)
+    - Tell me about [section 387](ipc_section)
+    - Tell me about [section 388](ipc_section)
+    - Tell me about [section 389](ipc_section)
+    - Tell me about [section 390](ipc_section)
+    - Tell me about [section 391](ipc_section)
+    - Tell me about [section 393](ipc_section)
+    - Tell me about [section 394](ipc_section)
+    - Tell me about [section 395](ipc_section)
+    - Tell me about [section 396](ipc_section)
+    - Tell me about [section 397](ipc_section)
+    - Tell me about [section 398](ipc_section)
+    - Tell me about [section 399](ipc_section)
+    - Tell me about [section 400](ipc_section)
+    - Tell me about [section 401](ipc_section)
+    - Tell me about [section 402](ipc_section)
+    - Tell me about [section 403](ipc_section)
+    - Tell me about [section 404](ipc_section)
+    - Tell me about [section 405](ipc_section)
+    - Tell me about [section 406](ipc_section)
+    - Tell me about [section 407](ipc_section)
+    - Tell me about [section 408](ipc_section)
+    - Tell me about [section 410](ipc_section)
+    - Tell me about [section 411](ipc_section)
+    - Tell me about [section 412](ipc_section)
+    - Tell me about [section 413](ipc_section)
+    - Tell me about [section 414](ipc_section)
+    - Tell me about [section 415](ipc_section)
+    - Tell me about [section 416](ipc_section)
+    - Tell me about [section 417](ipc_section)
+    - Tell me about [section 418](ipc_section)
+    - Tell me about [section 419](ipc_section)
+    - Tell me about [section 421](ipc_section)
+    - Tell me about [section 422](ipc_section)
+    - Tell me about [section 423](ipc_section)
+    - Tell me about [section 424](ipc_section)
+    - Tell me about [section 425](ipc_section)
+    - Tell me about [section 426](ipc_section)
+    - Tell me about [section 427](ipc_section)
+    - Tell me about [section 428](ipc_section)
+    - Tell me about [section 429](ipc_section)
+    - Tell me about [section 430](ipc_section)
+    - Tell me about [section 431](ipc_section)
+    - Tell me about [section 432](ipc_section)
+    - Tell me about [section 433](ipc_section)
+    - Tell me about [section 434](ipc_section)
+    - Tell me about [section 435](ipc_section)
+    - Tell me about [section 436](ipc_section)
+    - Tell me about [section 437](ipc_section)
+    - Tell me about [section 438](ipc_section)
+    - Tell me about [section 439](ipc_section)
+    - Tell me about [section 440](ipc_section)
+    - Tell me about [section 441](ipc_section)
+    - Tell me about [section 442](ipc_section)
+    - Tell me about [section 443](ipc_section)
+    - Tell me about [section 444](ipc_section)
+    - Tell me about [section 445](ipc_section)
+    - Tell me about [section 446](ipc_section)
+    - Tell me about [section 447](ipc_section)
+    - Tell me about [section 448](ipc_section)
+    - Tell me about [section 449](ipc_section)
+    - Tell me about [section 450](ipc_section)
+    - Tell me about [section 451](ipc_section)
+    - Tell me about [section 452](ipc_section)
+    - Tell me about [section 453](ipc_section)
+    - Tell me about [section 454](ipc_section)
+    - Tell me about [section 455](ipc_section)
+    - Tell me about [section 456](ipc_section)
+    - Tell me about [section 457](ipc_section)
+    - Tell me about [section 458](ipc_section)
+    - Tell me about [section 459](ipc_section)
+    - Tell me about [section 460](ipc_section)
+    - Tell me about [section 461](ipc_section)
+    - Tell me about [section 462](ipc_section)
+    - Tell me about [section 463](ipc_section)
+    - Tell me about [section 464](ipc_section)
+    - Tell me about [section 466](ipc_section)
+    - Tell me about [section 467](ipc_section)
+    - Tell me about [section 468](ipc_section)
+    - Tell me about [section 469](ipc_section)
+    - Tell me about [section 470](ipc_section)
+    - Tell me about [section 471](ipc_section)
+    - Tell me about [section 472](ipc_section)
+    - Tell me about [section 473](ipc_section)
+    - Tell me about [section 474](ipc_section)
+    - Tell me about [section 475](ipc_section)
+    - Tell me about [section 476](ipc_section)
+    - Tell me about [section 477](ipc_section)
+    - Tell me about [section 478](ipc_section)
+    - Tell me about [section 479](ipc_section)
+    - Tell me about [section 480](ipc_section)
+    - Tell me about [section 481](ipc_section)
+    - Tell me about [section 482](ipc_section)
+    - Tell me about [section 483](ipc_section)
+    - Tell me about [section 484](ipc_section)
+    - Tell me about [section 485](ipc_section)
+    - Tell me about [section 486](ipc_section)
+    - Tell me about [section 487](ipc_section)
+    - Tell me about [section 488](ipc_section)
+    - Tell me about [section 489](ipc_section)
+    - Tell me about [section 490](ipc_section)
+    - Tell me about [section 491](ipc_section)
+    - Tell me about [section 492](ipc_section)
+    - Tell me about [section 493](ipc_section)
+    - Tell me about [section 494](ipc_section)
+    - Tell me about [section 495](ipc_section)
+    - Tell me about [section 496](ipc_section)
+    - Tell me about [section 497](ipc_section)
+    - Tell me about [section 498](ipc_section)
+    - Tell me about [section 499](ipc_section)
+    - Tell me about [section 501](ipc_section)
+    - Tell me about [section 502](ipc_section)
+    - Tell me about [section 503](ipc_section)
+    - Tell me about [section 504](ipc_section)
+    - Tell me about [section 505](ipc_section)
+    - Tell me about [section 506](ipc_section)
+    - Tell me about [section 507](ipc_section)
+    - Tell me about [section 508](ipc_section)
+    - Tell me about [section 510](ipc_section)
+    - Tell me about [section 512](ipc_section)
+    - Tell me about [section 513](ipc_section)
+    - Tell me about [section 514](ipc_section)
+    - Tell me about [section 515](ipc_section)
+    - Tell me about [section 516](ipc_section)
+    - Tell me about [section 517](ipc_section)
+    - Tell me about [section 518](ipc_section)
+    - Tell me about [section 519](ipc_section)
+    - Tell me about [section 520](ipc_section)
+    - Tell me about [section 521](ipc_section)
+    - Tell me about [section 522](ipc_section)
+    - Tell me about [section 523](ipc_section)
+    - Tell me about [section 524](ipc_section)
+    - Tell me about [section 525](ipc_section)
+    - Tell me about [section 526](ipc_section)
+    - Tell me about [section 527](ipc_section)
+    - Tell me about [section 528](ipc_section)
+    - Tell me about [section 529](ipc_section)
+    - Tell me about [section 530](ipc_section)
+    - Tell me about [section 531](ipc_section)
+    - Tell me about [section 532](ipc_section)
+    - Tell me about [section 533](ipc_section)
+    - Tell me about [section 534](ipc_section)
+    - Tell me about [section 535](ipc_section)
+    - Tell me about [section 536](ipc_section)
+    - Tell me about [section 537](ipc_section)
+    - Tell me about [section 538](ipc_section)
+    - Tell me about [section 539](ipc_section)
+    - Tell me about [section 540](ipc_section)
+    - Tell me about [section 541](ipc_section)
+    - Tell me about [section 542](ipc_section)
+    - Tell me about [section 543](ipc_section)
+    - Tell me about [section 544](ipc_section)
+    - Tell me about [section 545](ipc_section)
+    - Tell me about [section 546](ipc_section)
+    - Tell me about [section 547](ipc_section)
+    - Tell me about [section 548](ipc_section)
+    - Tell me about [section 549](ipc_section)
+    - Tell me about [section 550](ipc_section)
+    - Tell me about [section 551](ipc_section)
+    - Tell me about [section 552](ipc_section)
+    - Tell me about [section 553](ipc_section)
+    - Tell me about [section 554](ipc_section)
+    - Tell me about [section 555](ipc_section)
+    - Tell me about [section 556](ipc_section)
+    - Tell me about [section 557](ipc_section)
+    - Tell me about [section 558](ipc_section)
+    - Tell me about [section 559](ipc_section)
+    - Tell me about [section 560](ipc_section)
+    - Tell me about [section 561](ipc_section)
+    - Tell me about [section 562](ipc_section)
+    - Tell me about [section 563](ipc_section)
+    - Tell me about [section 564](ipc_section)
+    - Tell me about [section 565](ipc_section)
+    - Tell me about [section 566](ipc_section)
+    - Tell me about [section 567](ipc_section)
+    - Tell me about [section 568](ipc_section)
+    - Tell me about [section 569](ipc_section)
+    - Tell me about [section 570](ipc_section)
+    - Tell me about [section 571](ipc_section)
+    - Tell me about [section 572](ipc_section)
+    - Tell me about [section 573](ipc_section)
+    - Tell me about [section 574](ipc_section)
+    - Tell me about [section 575](ipc_section)
+    - Tell me about [section 576](ipc_section)
+    - Tell me about [section 577](ipc_section)
+    - Tell me about [section 578](ipc_section)
+    - Tell me about [section 579](ipc_section)
+    - Tell me about [section 580](ipc_section)
+    - Tell me about [section 581](ipc_section)
+    - Tell me about [section 582](ipc_section)
+    - Tell me about [section 583](ipc_section)
+    - Tell me about [section 584](ipc_section)
+    - Tell me about [section 585](ipc_section)
+    - Tell me about [section 586](ipc_section)
+    - Tell me about [section 587](ipc_section)
+    - Tell me about [section 588](ipc_section)
+    - Tell me about [section 589](ipc_section)
+    - Tell me about [section 590](ipc_section)
+    - Tell me about [section 591](ipc_section)
+    - Tell me about [section 592](ipc_section)
+    - Tell me about [section 593](ipc_section)
+    - Tell me about [section 594](ipc_section)
+    - Tell me about [section 595](ipc_section)
+    - Tell me about [section 596](ipc_section)
+    - Tell me about [section 597](ipc_section)
+    - Tell me about [section 598](ipc_section)
+    - Tell me about [section 599](ipc_section)
+    - Tell me about [section 600](ipc_section)
+
+# Regex pattern for IPC section entity extraction
+- regex: ipc_section
+  examples: |
+    - (IPC )?section ?[0-9]{1,4}[A-Z]*
+    - IPC ?[0-9]{1,4}[A-Z]*
+    - section ?[0-9]{1,4}[A-Z]*
+
+synonyms:
+  - synonym: murder
+    examples: |
+      - murder
+      - killing
+      - homicide
+  - synonym: theft
+    examples: |
+      - theft
+      - stealing
+      - larceny
+  - synonym: robbery
+    examples: |
+      - robbery
+      - armed robbery
+      - hold-up
+  - synonym: assault
+    examples: |
+      - assault
+      - battery
+      - attack
+  - synonym: fraud
+    examples: |
+      - fraud
+      - cheating
+      - deception
+  - synonym: cyber fraud
+    examples: |
+      - cyber fraud
+      - cybercrime
+      - cyber crime
+      - online fraud
+      - internet fraud
+      - digital fraud
+      - computer fraud
+      - electronic fraud
+  - synonym: cyber crime
+    examples: |
+      - cyber crime
+      - cybercrime
+      - online crime
+  - synonym: domestic violence
+    examples: |
+      - domestic violence
+      - domestic abuse
+      - spousal abuse
+  - synonym: kidnapping
+    examples: |
+      - kidnapping
+      - abduction
+      - hostage taking
+  - synonym: rape
+    examples: |
+      - rape
+      - sexual assault
+      - sexual violence
+  - synonym: dowry
+    examples: |
+      - dowry
+      - dowry death
+      - giving dowry
+      - taking dowry
+  - synonym: sexual harassment
+    examples: |
+      - sexual harassment
+      - harassment
+      - eve teasing
+      - unwelcome advances
+  - synonym: terrorism
+    examples: |
+      - terrorism
+      - terror
+      - terrorist act
+      - terror attack

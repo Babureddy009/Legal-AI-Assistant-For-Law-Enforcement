@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>First Information Report (FIR) - Legal AI Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: #f5f6fa;
+        }
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+            background-color: #f5f6fa;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            box-shadow: 2px 0 8px rgba(44,62,80,0.04);
+            z-index: 10;
+            transition: width 0.2s;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 8px;
+            margin-bottom: 0px;
+        }
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #fff;
+        }
+        .user-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .username {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .status {
+            font-size: 12px;
+            color: #2ecc71;
+        }
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .nav-item.active {
+            background: #3498db;
+            color: white;
+        }
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+        }
+        .main-content {
+            flex: 1;
+            margin-left: 250px;
+            padding: 20px;
+            background-color: #f5f6fa;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            transition: margin-left 0.2s;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        .fir-container {
+            width: 100%;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+        .title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #2c3e50;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e9ecef;
+            letter-spacing: 1px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px 32px;
+            margin-bottom: 18px;
+        }
+        .section {
+            margin-top: 0;
+            padding: 28px 24px 18px 24px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 1px 8px rgba(44,62,80,0.04);
+            margin-bottom: 18px;
+        }
+        .section h3 {
+            margin-bottom: 18px;
+            color: #3498db;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h3 i {
+            color: #3498db;
+        }
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding: 30px 0 0 0;
+            border-top: 2px solid #e9ecef;
+            gap: 32px;
+        }
+        .signature {
+            flex: 1;
+            text-align: center;
+        }
+        .signature-input {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .signature-field {
+            width: 100%;
+            padding: 14px 10px;
+            border: none;
+            border-bottom: 2px solid #3498db;
+            background: transparent;
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            border-radius: 0;
+        }
+        .signature-field:focus {
+            outline: none;
+            border-bottom-color: #2ecc71;
+        }
+        .signature p {
+            margin: 10px 0;
+            color: #2c3e50;
+            font-size: 15px;
+        }
+        .signature-date {
+            width: 170px;
+            padding: 12px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 18px 14px;
+            margin-bottom: 10px;
+            border: 1.5px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 1.08rem;
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52,152,219,0.10);
+        }
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+        .bold-label {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            align-items: center;
+            margin-top: 32px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            max-width: 350px;
+            padding: 18px 0;
+            font-size: 1.15rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(52,152,219,0.08);
+            /* Debug border for visual confirmation */
+            /* border: 1px solid red; */
+        }
+        .btn i, .btn svg {
+            font-size: 1.4em;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            /* border: 1px solid blue; */
+        }
+        .btn-success {
+            background: #2ecc71;
+            color: #fff;
+        }
+        .btn-success:hover {
+            background: #27ae60;
+        }
+        .btn-primary {
+            background: #3498db;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .nav-back:hover {
+            color: #2980b9;
+            transform: translateX(-5px);
+        }
+        .nav-back i {
+            font-size: 14px;
+        }
+        @media (max-width: 1400px) {
+            .fir-container {
+                padding: 24px 8px 16px 8px;
+            }
+        }
+        @media (max-width: 1100px) {
+            .fir-container {
+                max-width: 98vw;
+                padding: 16px 4px;
+            }
+        }
+        @media (max-width: 900px) {
+            .fir-container {
+                max-width: 100%;
+                margin: 16px 8px 0 8px;
+                padding: 16px 4px 12px 4px;
+            }
+            .form-grid, .section .form-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .signatures {
+                flex-direction: column;
+                gap: 18px;
+            }
+        }
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .sidebar-header img {
+            width: 36px;
+            height: 36px;
+        }
+        .sidebar-header h2 {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        .nav-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 0px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" aria-label="Main sidebar">
+            <div class="sidebar-header">
+                <img src="/static/bot.svg" alt="Bot icon" width="36" height="36" style="margin-right:8px;" />
+                <h2>Legal AI Assistant</h2>
+            </div>
+            <div class="user-info" aria-label="User info">
+                <div class="user-avatar" aria-hidden="true">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <span class="username">User</span>
+                    <span class="status">Online</span>
+                </div>
+            </div>
+            <nav class="sidebar-nav" aria-label="Sidebar navigation">
+                <a href="/chat" class="nav-item" tabindex="0"><i class="fas fa-comments"></i> <span>Chat</span></a>
+                <a href="/fir" class="nav-item active" tabindex="0"><i class="fas fa-file-alt"></i> <span>FIR Form</span></a>
+                <a href="/fir/admin" class="nav-item" tabindex="0"><i class="fas fa-user-shield"></i> <span>FIR Admin</span></a>
+                <a href="/ipc/admin" class="nav-item" tabindex="0"><i class="fas fa-gavel"></i> <span>IPC Admin</span></a>
+                <a href="/chat/history" class="nav-item" tabindex="0"><i class="fas fa-history"></i> <span>Chat History</span></a>
+                <a href="/about" class="nav-item" tabindex="0"><i class="fas fa-info-circle"></i> <span>About</span></a>               <a href="/" class="nav-item" tabindex="0"><i class="fas fa-sign-out-alt"></i> <span>Logout</span></a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="fir-container main-content-container">
+                <a href="/chat" class="nav-back">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Chat
+                </a>
+                <div id="firForm">
+                    <div class="title">
+                        <img src="/static/bot.svg" alt="Bot icon" width="32" height="32" style="vertical-align:middle;margin-right:8px;" />
+                        First Information Report (FIR)
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label class="bold-label">Police Station Name</label>
+                            <input type="text" id="policeStation" placeholder="Enter Police Station">
+                        </div>
+                        <div>
+                            <label class="bold-label">FIR Number</label>
+                            <input type="text" id="firNumber" placeholder="Enter FIR No">
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div>
+                            <label class="bold-label">District</label>
+                            <input type="text" id="district" placeholder="Enter District">
+                        </div>
+                        <div>
+                            <label class="bold-label">Date</label>
+                            <input type="date" id="firDate">
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3><img src="/static/user.svg" alt="User icon" width="20" height="20" style="vertical-align:middle;margin-right:6px;" />Complainant Details</h3>
+                        <div class="form-grid">
+                            <div>
+                                <label class="bold-label">Name</label>
+                                <input type="text" id="compName" placeholder="Enter Name">
+                            </div>
+                            <div>
+                                <label class="bold-label">Father's / Mother's Name</label>
+                                <input type="text" id="parentName" placeholder="Enter Parent's Name">
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div>
+                                <label class="bold-label">Age</label>
+                                <input type="number" id="age" placeholder="Enter Age">
+                            </div>
+                            <div>
+                                <label class="bold-label">Gender</label>
+                                <select id="gender">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-grid">
+                            <div>
+                                <label class="bold-label">Nationality</label>
+                                <input type="text" id="nationality" placeholder="Enter Nationality">
+                            </div>
+                            <div>
+                                <label class="bold-label">Occupation</label>
+                                <input type="text" id="occupation" placeholder="Enter Occupation">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="bold-label">Address</label>
+                            <input type="text" id="address" placeholder="Enter Address">
+                        </div>
+                        <div>
+                            <label class="bold-label">Phone No / Email</label>
+                            <input type="text" id="contact" placeholder="Enter Phone or Email">
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-info-circle"></i> Type of Information</h3>
+                        <select id="infoType">
+                            <option value="">Select Type</option>
+                            <option value="Oral">Oral</option>
+                            <option value="Written">Written</option>
+                        </select>
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-map-marker-alt"></i> Place of Occurrence of Offence</h3>
+                        <input type="text" id="placeOccur" placeholder="Enter Place of Occurrence">
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-calendar-alt"></i> Date and Time of Occurrence</h3>
+                        <input type="datetime-local" id="datetimeOccur">
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-user-shield"></i> Details of Known / Suspected / Accused</h3>
+                        <textarea id="accusedDetails" placeholder="Enter Accused Details"></textarea>
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-box"></i> Particulars of Property Involved</h3>
+                        <textarea id="propertyDetails" placeholder="Enter Property Details"></textarea>
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-rupee-sign"></i> Total Value of Property</h3>
+                        <input type="number" id="propertyValue" placeholder="Enter Value">
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-file-signature"></i> FIR Complaint</h3>
+                        <textarea id="firComplaint" placeholder="Enter FIR Complaint"></textarea>
+                    </div>
+
+                    <div class="section">
+                        <h3><i class="fas fa-gavel"></i> Sections & Acts Applied</h3>
+                        <textarea id="sectionsActs" placeholder="Enter Sections & Acts (e.g., IPC 420, IPC 376)"></textarea>
+                    </div>
+
+                    <div class="signatures">
+                        <div class="signature">
+                            <div class="signature-input">
+                                <input type="text" id="complainantSignature" placeholder="Type your full name" class="signature-field">
+                                <div class="signature-line"></div>
+                            </div>
+                            <p>Signature of Complainant</p>
+                            <input type="date" id="complainantDate" class="signature-date">
+                        </div>
+                        <div class="signature">
+                            <div class="signature-input">
+                                <input type="text" id="officerSignature" placeholder="Type officer's full name" class="signature-field">
+                                <div class="signature-line"></div>
+                            </div>
+                            <p>Signature of Officer-in-Charge,<br>Police Station</p>
+                            <input type="date" id="officerDate" class="signature-date">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions" style="display: flex; flex-direction: column; gap: 16px; align-items: center; margin-top: 32px;">
+                    <button id="save-fir-btn" type="button" class="btn btn-success" style="width: 250px; font-size: 1.1rem;">
+                        <i class="fas fa-save"></i> Save FIR
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        // Save FIR button handler
+        document.getElementById('save-fir-btn').addEventListener('click', async function() {
+            // Collect form data
+            const firData = {
+                police_station: document.getElementById('policeStation').value,
+                fir_number: document.getElementById('firNumber').value,
+                district: document.getElementById('district').value,
+                fir_date: document.getElementById('firDate').value,
+                complainant: {
+                    name: document.getElementById('compName').value,
+                    parent_name: document.getElementById('parentName').value,
+                    age: document.getElementById('age').value,
+                    gender: document.getElementById('gender').value,
+                    nationality: document.getElementById('nationality').value,
+                    occupation: document.getElementById('occupation').value,
+                    address: document.getElementById('address').value,
+                    contact: document.getElementById('contact').value
+                },
+                info_type: document.getElementById('infoType').value,
+                place_of_occurrence: document.getElementById('placeOccur').value,
+                date_time_of_occurrence: document.getElementById('datetimeOccur').value,
+                accused_details: document.getElementById('accusedDetails').value,
+                property_details: document.getElementById('propertyDetails').value,
+                property_value: document.getElementById('propertyValue').value,
+                complaint: document.getElementById('firComplaint').value,
+                sections_acts: document.getElementById('sectionsActs').value
+            };
+            try {
+                const response = await fetch('/api/fir', {
+                    method: 'POST',
+                    headers: { 
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(firData)
+                });
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.detail || 'Failed to save FIR');
+                }
+                const result = await response.json();
+                if (result.status === 'success') {
+                    alert('FIR saved successfully!');
+                    // Redirect to admin page after successful save
+                    window.location.href = '/fir/admin';
+                } else {
+                    alert(result.detail || 'An error occurred while saving the FIR. Please try again.');
+                }
+            } catch (err) {
+                console.error('Error:', err);
+                alert('An error occurred while saving the FIR. Please try again.');
+            }
+        });
+
+        // Collect and validate FIR form data
+        function collectFIRFormData() {
+            // Example: Replace these with your actual field IDs/names
+            const policeStation = document.getElementById('policeStation').value.trim();
+            const firNumber = document.getElementById('firNumber') ? document.getElementById('firNumber').value.trim() : null;
+            const district = document.getElementById('district').value.trim();
+            const firDate = document.getElementById('firDate').value;
+            const complainantName = document.getElementById('compName').value.trim();
+            const parentName = document.getElementById('parentName').value.trim();
+            const age = parseInt(document.getElementById('age').value, 10);
+            const gender = document.getElementById('gender').value;
+            const nationality = document.getElementById('nationality').value.trim();
+            const occupation = document.getElementById('occupation').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const contact = document.getElementById('contact').value.trim();
+            const infoType = document.getElementById('infoType').value;
+            const placeOfOccurrence = document.getElementById('placeOccur').value.trim();
+            const dateTimeOfOccurrence = document.getElementById('datetimeOccur').value;
+            const accusedDetails = document.getElementById('accusedDetails').value.trim();
+            const propertyDetails = document.getElementById('propertyDetails').value.trim();
+            const propertyValue = document.getElementById('propertyValue').value;
+            const complaint = document.getElementById('firComplaint').value.trim();
+            const sectionsActs = document.getElementById('sectionsActs').value.trim();
+
+            // Basic validation
+            if (!policeStation || !district || !firDate || !complainantName || !parentName || !age || !gender || !address || !contact || !infoType || !placeOfOccurrence || !dateTimeOfOccurrence || !complaint) {
+                alert('Please fill in all required fields.');
+                return null;
+            }
+
+            return {
+                police_station: policeStation,
+                fir_number: firNumber || undefined,
+                district: district,
+                fir_date: firDate,
+                complainant: {
+                    name: complainantName,
+                    parent_name: parentName,
+                    age: age,
+                    gender: gender,
+                    nationality: nationality || undefined,
+                    occupation: occupation || undefined,
+                    address: address,
+                    contact: contact
+                },
+                info_type: infoType,
+                place_of_occurrence: placeOfOccurrence,
+                date_time_of_occurrence: dateTimeOfOccurrence,
+                accused_details: accusedDetails || undefined,
+                property_details: propertyDetails || undefined,
+                property_value: propertyValue ? parseFloat(propertyValue) : undefined,
+                complaint: complaint,
+                sections_acts: sectionsActs || undefined
+            };
+        }
+
+        // Handle form submission
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = {
+                police_station: document.getElementById('police_station').value,
+                district: document.getElementById('district').value,
+                fir_date: document.getElementById('fir_date').value,
+                info_type: document.getElementById('info_type').value,
+                place_of_occurrence: document.getElementById('place_of_occurrence').value,
+                date_time_of_occurrence: document.getElementById('date_time_of_occurrence').value,
+                accused_details: document.getElementById('accused_details').value,
+                property_details: document.getElementById('property_details').value,
+                property_value: document.getElementById('property_value').value ? parseFloat(document.getElementById('property_value').value) : null,
+                complaint: document.getElementById('complaint').value,
+                sections_acts: document.getElementById('sections_acts').value,
+                complainant: {
+                    name: document.getElementById('complainant_name').value,
+                    parent_name: document.getElementById('complainant_parent_name').value,
+                    age: parseInt(document.getElementById('complainant_age').value),
+                    gender: document.getElementById('complainant_gender').value,
+                    nationality: document.getElementById('complainant_nationality').value,
+                    occupation: document.getElementById('complainant_occupation').value,
+                    address: document.getElementById('complainant_address').value,
+                    contact: document.getElementById('complainant_contact').value
+                }
+            };
+
+            try {
+                const response = await fetch('/fir', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    alert('FIR submitted successfully!');
+                    // Redirect to the FIR details page
+                    window.location.href = `/fir/${result.fir_id}`;
+                } else {
+                    alert(`Error: ${result.detail}`);
+                }
+            } catch (error) {
+                console.error('Error submitting FIR:', error);
+                alert('Error submitting FIR. Please try again.');
+            }
+        }
+
+        // Add form submit event listener
+        document.getElementById('firForm').addEventListener('submit', handleSubmit);
+
+        // Add validation
+        function validateForm() {
+            const requiredFields = [
+                'police_station', 'district', 'fir_date', 'info_type',
+                'place_of_occurrence', 'date_time_of_occurrence', 'complaint',
+                'complainant_name', 'complainant_parent_name', 'complainant_age',
+                'complainant_gender', 'complainant_address', 'complainant_contact'
+            ];
+
+            for (const field of requiredFields) {
+                const element = document.getElementById(field);
+                if (!element.value.trim()) {
+                    alert(`Please fill in the ${field.replace('_', ' ')} field.`);
+                    element.focus();
+                    return false;
+                }
+            }
+
+            // Validate age
+            const age = parseInt(document.getElementById('complainant_age').value);
+            if (isNaN(age) || age < 1 || age > 150) {
+                alert('Please enter a valid age between 1 and 150.');
+                document.getElementById('complainant_age').focus();
+                return false;
+            }
+
+            // Validate property value if provided
+            const propertyValue = document.getElementById('property_value').value;
+            if (propertyValue && (isNaN(propertyValue) || parseFloat(propertyValue) < 0)) {
+                alert('Please enter a valid property value.');
+                document.getElementById('property_value').focus();
+                return false;
+            }
+
+            return true;
+        }
+
+        // Add validation to form submission
+        document.getElementById('firForm').addEventListener('submit', function(event) {
+            if (!validateForm()) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html> 

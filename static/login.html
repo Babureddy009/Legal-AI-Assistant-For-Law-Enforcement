@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to AI-LA - Legal Assistant</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background: url('/static/Loginpage.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1rem;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(19, 47, 59, 0.8), rgba(19, 47, 59, 0.9));
+            z-index: 1;
+        }
+
+        .welcome-text {
+            color: white;
+            text-align: center;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 2;
+            animation: fadeInDown 1s ease-out;
+            margin-top: -3rem;
+        }
+
+        .welcome-text h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+            margin-bottom: 2rem;
+        }
+
+        .welcome-text p {
+            font-size: 2rem;
+            margin: 0;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 500;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 320px;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+            margin-top: -1rem;
+        }
+
+        .login-header {
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+
+        .login-header svg {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 0.2rem;
+            fill: #3498db;
+        }
+
+        .login-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 0.6rem;
+            line-height: 1;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: #34495e;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        .form-actions {
+            margin-top: 1.5rem;
+        }
+
+        .form-actions button {
+            margin-top: 0.8rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .error {
+            color: #e74c3c;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 500;
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+
+        @media (max-width: 768px) {
+            .welcome-text h1 {
+                font-size: 2.5rem;
+            }
+            .welcome-text p {
+                font-size: 1rem;
+            }
+            .login-container {
+                padding: 1.5rem;
+                max-width: 320px;
+                margin-top: -1rem;
+            }
+            .login-title {
+                font-size: 1.8rem;
+            }
+            .form-group input {
+                padding: 0.7rem;
+            }
+            button {
+                padding: 0.8rem;
+            }
+        }
+
+        /* Loading animation for button */
+        .loading {
+            position: relative;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 50%;
+            left: 50%;
+            margin: -10px 0 0 -10px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-text">
+        <h1>Welcome to AI-LA</h1>
+    </div>
+
+    <div class="login-container" role="main" aria-labelledby="login-title">
+        <div class="login-header">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm10 5v8H6v-8h12zm-6 2a2 2 0 0 0-2 2h2a2 2 0 0 0-2-2z"/>
+            </svg>
+            <h2 class="login-title">Sign In</h2>
+        </div>
+
+        <form method="POST" action="/login">            
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required autocomplete="username" 
+                       aria-required="true" placeholder="Enter your username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password" 
+                       aria-required="true" placeholder="Enter your password">
+            </div>
+
+            <button type="submit" aria-label="Sign in to your account">Sign In</button>
+        </form>
+
+        {% if error %}
+        <div class="error" role="alert">{{ error }}</div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Add loading state to button on form submit
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const button = this.querySelector('button[type="submit"]');
+            button.classList.add('loading');
+            button.disabled = true;
+        });
+
+        // Add focus effects for form groups
+        document.querySelectorAll('.form-group input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focused');
+            });
+        });
+    </script>
+</body>
+</html>

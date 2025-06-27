@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIR Details - Legal AI Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .fir-details-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .fir-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        .fir-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin: 0;
+        }
+        .fir-status {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .status-submitted { background: #e3f2fd; color: #1976d2; }
+        .status-approved { background: #e8f5e9; color: #2e7d32; }
+        .status-rejected { background: #ffebee; color: #c62828; }
+        .status-review { background: #fff3e0; color: #ef6c00; }
+        .fir-section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 18px;
+            color: #3498db;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        .detail-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .detail-item {
+            margin-bottom: 15px;
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .detail-value {
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            justify-content: flex-end;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #2980b9;
+        }
+        .btn-secondary {
+            background: #95a5a6;
+            color: white;
+        }
+        .btn-secondary:hover {
+            background: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="fir-details-container">
+        <div class="fir-header">
+            <h1 class="fir-title">FIR #<span id="firNumber"></span></h1>
+            <span id="firStatus" class="fir-status"></span>
+        </div>
+
+        <div class="fir-section">
+            <h2 class="section-title">Basic Information</h2>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Police Station</div>
+                    <div class="detail-value" id="policeStation"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">District</div>
+                    <div class="detail-value" id="district"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">FIR Date</div>
+                    <div class="detail-value" id="firDate"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Information Type</div>
+                    <div class="detail-value" id="infoType"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fir-section">
+            <h2 class="section-title">Complainant Details</h2>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Name</div>
+                    <div class="detail-value" id="complainantName"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Parent Name</div>
+                    <div class="detail-value" id="complainantParentName"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Age</div>
+                    <div class="detail-value" id="complainantAge"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Gender</div>
+                    <div class="detail-value" id="complainantGender"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Nationality</div>
+                    <div class="detail-value" id="complainantNationality"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Occupation</div>
+                    <div class="detail-value" id="complainantOccupation"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Address</div>
+                    <div class="detail-value" id="complainantAddress"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Contact</div>
+                    <div class="detail-value" id="complainantContact"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fir-section">
+            <h2 class="section-title">Incident Details</h2>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="detail-label">Place of Occurrence</div>
+                    <div class="detail-value" id="placeOfOccurrence"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Date & Time of Occurrence</div>
+                    <div class="detail-value" id="dateTimeOfOccurrence"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Accused Details</div>
+                    <div class="detail-value" id="accusedDetails"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Property Details</div>
+                    <div class="detail-value" id="propertyDetails"></div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Property Value</div>
+                    <div class="detail-value" id="propertyValue"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fir-section">
+            <h2 class="section-title">Complaint Details</h2>
+            <div class="detail-item">
+                <div class="detail-label">Complaint</div>
+                <div class="detail-value" id="complaint"></div>
+            </div>
+            <div class="detail-item">
+                <div class="detail-label">Sections & Acts</div>
+                <div class="detail-value" id="sectionsActs"></div>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn btn-secondary" onclick="window.history.back()">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button class="btn btn-primary" onclick="generatePDF()">
+                <i class="fas fa-file-pdf"></i> Generate PDF
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get fir_id from the URL
+            const firId = window.location.pathname.split("/").pop();
+            fetch(`/api/fir/${firId}`)
+                .then(response => {
+                    if (!response.ok) throw new Error('FIR not found');
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById("firNumber").textContent = data.fir_number || '';
+                    document.getElementById("firStatus").textContent = data.status || '';
+                    document.getElementById("firDate").textContent = data.fir_date ? new Date(data.fir_date).toLocaleDateString() : '';
+                    document.getElementById("policeStation").textContent = data.police_station || '';
+                    document.getElementById("district").textContent = data.district || '';
+                    document.getElementById("infoType").textContent = data.info_type || '';
+                    document.getElementById("complainantName").textContent = data.complainant_name || '';
+                    document.getElementById("complainantParentName").textContent = data.complainant_parent_name || '';
+                    document.getElementById("complainantAge").textContent = data.complainant_age || '';
+                    document.getElementById("complainantGender").textContent = data.complainant_gender || '';
+                    document.getElementById("complainantNationality").textContent = data.complainant_nationality || '';
+                    document.getElementById("complainantOccupation").textContent = data.complainant_occupation || '';
+                    document.getElementById("complainantAddress").textContent = data.complainant_address || '';
+                    document.getElementById("complainantContact").textContent = data.complainant_contact || '';
+                    document.getElementById("placeOfOccurrence").textContent = data.place_of_occurrence || '';
+                    document.getElementById("dateTimeOfOccurrence").textContent = data.date_time_of_occurrence ? new Date(data.date_time_of_occurrence).toLocaleString() : '';
+                    document.getElementById("accusedDetails").textContent = data.accused_details || '';
+                    document.getElementById("propertyDetails").textContent = data.property_details || '';
+                    document.getElementById("propertyValue").textContent = data.property_value !== null && data.property_value !== undefined ? data.property_value : '';
+                    document.getElementById("complaint").textContent = data.complaint || '';
+                    document.getElementById("sectionsActs").textContent = data.sections_acts || '';
+                })
+                .catch(error => {
+                    console.error("Error loading FIR details:", error);
+                    alert("Error loading FIR details.");
+                });
+        });
+
+        // Generate PDF
+        async function generatePDF() {
+            try {
+                const firId = window.location.pathname.split("/").pop();
+                window.location.href = `/api/fir/${firId}/pdf`;
+            } catch (error) {
+                console.error('Error generating PDF:', error);
+                alert('Error generating PDF. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,124 @@
+{
+    "crimes": [
+        {
+            "name": "murder",
+            "description": "The intentional killing of another person with malice aforethought.",
+            "severity": "heinous",
+            "category": "violent",
+            "bailable": false,
+            "cognizable": true,
+            "compoundable": false,
+            "ipc_sections": ["302", "299", "300", "301"]
+        },
+        {
+            "name": "theft",
+            "description": "The act of dishonestly taking movable property out of the possession of another person without their consent.",
+            "severity": "major",
+            "category": "property",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["378", "379", "380", "381", "382"]
+        },
+        {
+            "name": "robbery",
+            "description": "Theft with force or threat of force, causing fear of death or hurt.",
+            "severity": "major",
+            "category": "violent",
+            "bailable": false,
+            "cognizable": true,
+            "compoundable": false,
+            "ipc_sections": ["390", "391", "392", "393", "394"]
+        },
+        {
+            "name": "cheating",
+            "description": "Fraudulently or dishonestly inducing a person to deliver any property or valuable security.",
+            "severity": "major",
+            "category": "financial",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["415", "417", "418", "419", "420"]
+        },
+        {
+            "name": "assault",
+            "description": "Use of criminal force to cause injury, harm, or criminal intimidation to another person.",
+            "severity": "major",
+            "category": "violent",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["351", "352", "353", "354", "355", "356", "357", "358"]
+        },
+        {
+            "name": "kidnapping",
+            "description": "Taking or enticing a person away from their lawful guardianship without consent.",
+            "severity": "heinous",
+            "category": "violent",
+            "bailable": false,
+            "cognizable": true,
+            "compoundable": false,
+            "ipc_sections": ["359", "360", "361", "362", "363", "364", "365", "366"]
+        },
+        {
+            "name": "rape",
+            "description": "Sexual assault or non-consensual sexual intercourse, including aggravated forms and sexual offenses against minors.",
+            "severity": "heinous",
+            "category": "sexual",
+            "bailable": false,
+            "cognizable": true,
+            "compoundable": false,
+            "ipc_sections": ["375", "376", "376A", "376B", "376C", "376D", "376E"]
+        },
+        {
+            "name": "criminal intimidation",
+            "description": "Threatening another with injury to person, reputation or property to cause alarm.",
+            "severity": "major",
+            "category": "violent",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["503", "506", "507"]
+        },
+        {
+            "name": "forgery",
+            "description": "Making a false document or electronic record with intent to cause damage or injury.",
+            "severity": "major",
+            "category": "financial",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["463", "464", "465", "466", "467", "468", "469", "470"]
+        },
+        {
+            "name": "criminal breach of trust",
+            "description": "Dishonestly misappropriating or converting property entrusted to oneself.",
+            "severity": "major",
+            "category": "financial",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["405", "406", "407", "408", "409"]
+        },
+        {
+            "name": "cyber fraud",
+            "description": "Fraudulent activities conducted through electronic means or the internet.",
+            "severity": "major",
+            "category": "cyber",
+            "bailable": true,
+            "cognizable": true,
+            "compoundable": true,
+            "ipc_sections": ["66", "66A", "66B", "66C", "66D", "66E", "66F"]
+        },
+        {
+            "name": "drug trafficking",
+            "description": "Illegal trade, transportation, or distribution of controlled substances.",
+            "severity": "heinous",
+            "category": "drug",
+            "bailable": false,
+            "cognizable": true,
+            "compoundable": false,
+            "ipc_sections": ["20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
+        }
+    ]
+} 

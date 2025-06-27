@@ -1,0 +1,53 @@
+stories:
+
+- story: crime confession path
+  steps:
+  - intent: confess_crime
+  - action: action_handle_crime_confession
+  - action: utter_crime_confession
+  - action: action_listen
+
+- story: ask about crime and punishment
+  steps:
+  - intent: ask_about_crime
+  - action: action_query_crime
+  - action: action_listen
+  - intent: ask_about_punishment
+  - action: action_query_crime
+  - action: action_listen
+
+- story: ask about IPC section
+  steps:
+  - intent: ask_about_ipc
+  - action: action_query_ipc_section
+  - action: action_listen
+
+- story: greet and ask about crime
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_listen
+  - intent: ask_about_crime
+  - action: action_query_crime
+  - action: action_listen
+
+- story: ask about crime and then IPC
+  steps:
+  - intent: ask_about_crime
+  - action: action_query_crime
+  - action: action_listen
+  - intent: ask_about_ipc
+  - action: action_query_ipc_section
+  - action: action_listen
+
+- story: out of scope handling
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+  - action: action_listen
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - action: action_listen 
